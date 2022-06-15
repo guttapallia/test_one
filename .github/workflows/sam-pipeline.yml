@@ -21,9 +21,9 @@ jobs:
           version: 1.23.0
 
 # Run Unit tests- Specify unit tests here 
-    - run: sam build --use-container
-    - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
+    # - run: sam build --use-container
+    # - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
 
 
 # sam deploy
-      # - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name github-actions-with-aws-sam --s3-bucket cicd-pipelines --capabilities CAPABILITY_IAM --region us-east-1
+      - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name github-actions-with-aws-sam --s3-bucket cicd-pipelines --capabilities CAPABILITY_IAM --region us-east-1
